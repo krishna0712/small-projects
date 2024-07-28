@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #f0f0f0;
+    display: flex;
+
+    justify-content: center;
+}
+
+.bigbox{
+    position: relative;
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    border-radius: 19px;
+    margin-top: 200px;
+    
+}
+
+.smallbox{
+    height: 120px;
+    width: 100%;
+    background-color: rgb(9, 81, 235);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-top: 20px;
+
+
+
+}
+ 
+.profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.namebox{
+    height: 30px;
+}
+
+.name{
+    text-align: center;
+    font: 0.75rem;
+    height: 40px;
+}
+
+#lineone {
+    font-family: sans-serif;
+}
+#linetwo{
+    font-size: 0.6rem;
+    font-family:cursive;
+}
+
+.symbols{
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.message{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.msgone {
+    height: 30px;
+    color: white;
+    background-color: rgb(33, 86, 233);
+    width: 90px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.msgtwo {
+    height: 30px;
+    color: white;
+    background-color: rgb(33, 86, 233);
+    width: 90px;
+    border-radius: 10px;
+    text-align: center;
+}
+a{
+    background-color: rgb(33, 86, 233);
+    text-decoration: none;
+    color: white;
+}
