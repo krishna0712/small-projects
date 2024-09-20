@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E6E6FA;
+    display: flex;
+    justify-content: center;
+}
+.review_card{
+    height: 1469px;
+    width: 600px;
+    background-color: rgb(237, 255, 244);
+    border-radius: 15px;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 1;
+
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.text{
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#lineone{
+    font-size:0.8rem ;
+    font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+}
+#line{
+    text-align: left;
+    margin-left: 40px;
+}
+.review{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 280px;
+    margin-bottom: 20px;
+    width: 545px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 13px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid transparent;
+    line-height: 1.4rem;
+    border: 2px solid lightgrey;
+    transition:all 0.3s ease;
+}
+
+.review:hover{
+    animation: changeBackground 10s ease-in-out;
+
+}
+@keyframes changeBackground {
+    0% {
+        background-color:  rgb(250, 250, 250); /* Start from white */
+      }
+      15%{
+        background-color: rgb(195, 241, 241) ;
+        border: 1px solid rgb(151, 163, 163);
+      }
+      50%{
+        background-color: rgb(195, 241, 241) ;
+      }
+      100% {
+        background-color: rgb(195, 241, 241);
+        border: 2px solid rgb(151, 163, 163);
+      }
+}
+
+.review:active{
+    border: 1px solid black;
+    transform: scale(1.4);
+}
+
+.ratings{
+    margin-bottom: 25px;
+    margin-top: 15px;
+}

@@ -43,5 +43,15 @@ ul li:hover a{
 }
 i{
     color: white;
-    height: 20px;
+}
+li a i {
+    padding-right: 20px;
+}
+
+#btn1:active{
+    z-index: 100;
+}
+
+.border{
+    color: white;
 }
