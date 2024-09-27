@@ -30,7 +30,7 @@ body{
 
 .container{
     width: 500px;
-    height: 680px;
+    height: 80px;
     background-color: var(--white-color);
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -115,6 +115,10 @@ form button:active{
 }
 
 #form3{
+    left: 500px;
+}
+
+#form4{
     left: 500px;
 }
 

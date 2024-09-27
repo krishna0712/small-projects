@@ -4,22 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
-    <link rel="stylesheet" href="style.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --line-border-empty: #38338;
+    --line-border-fill:#de3163;
+    --dark-color:#1c2833;
+    --light-grey-color:#ddd;
+    --white-color:#fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "poppins",sans-serif;
+    background: radial-gradient(
+        circle,
+        rgba(61,99,218,1) 0%,
+        rgba(214,84,207,1) 0%,
+        rgba(151,156,203,1) 100%
+    );
+}
+
+.container{
+    width: 500px;
+    height: 800px;
+    background-color: var(--white-color);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.container h3{
+    text-align: center;
+    margin-bottom: 0.6rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+.container form{
+    width: 440px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    font-family: inherit;
+    transition: 0.5s ease-in;
+}
+
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 5px;
+    background: transparent;
+    font-family: inherit;
+}
+
+form input:focus{
+    outline: none;
+    border: 1px solid var(--dark-color);
+}
+
+
+form textarea{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 5px;
+    background: transparent;
+    font-family: inherit;
+}
+
+form textarea:focus{
+    outline: none;
+    border: 1px solid var(--dark-color);
+}
+.btn_box{
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background-color: var(--line-border-fill);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    border-radius: 5px;
+    color: var(--light-grey-color);
+}
+
+form button:active{
+    transform: scale(0.98);
+}
+
+
+#form2{
+    left: 500px;
+}
+
+#form3{
+    left: 500px;
+}
+
+#form4{
+    left: 500px;
+}
+
+.progress_container{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin:1rem auto;
+    position: relative;
+
+}
+
+.progress_container::before{
+    content: '';
+    background-color: var(--light-grey-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    z-index: 1;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    z-index: 1;
+    transition: 0.4s ease-in;
+}
+
+.circle{
+    background-color: var(--light-grey-color);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+
+.circle.active {
+    border-color: var(--line-border-empty);
+    color: var(--white-color);
+    background-color: var(--line-border-fill);
+}
+
+#thankYouMessage {
+    text-align: center;
+    margin-top: 20px;
+}
+    </style>
+
 </head>
 <body>
     <div class="container">
         <form action="" id="form1">
             <h3>Personal Information</h3>
             <label>Full Name</label>
-            <input type="text" placeholder="Name">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="Phone Number">
+            <input type="text" placeholder="Name" required> <br><br>
+            <label style="margin-top: 20px;">Phone Number</label>
+            <input type="tel" placeholder="Phone Number" required><br><br>
             <label>Email</label>
-            <input type="email" placeholder="Email">
-            <label>Address</label>
-            <input type="text" placeholder="Address"></input>
+            <input type="email" placeholder="Email"><br><br>
+            <label style="margin-top: 20px;">Address</label>
+            <input type="text" placeholder="Address" required>
 
             <div class="btn_box">
                 <button id="next1" type="button">NEXT</button>
@@ -35,6 +214,8 @@
             <input type="text" placeholder="how are they related" >
             <label>Screentime</label>
             <input type="text" placeholder="screentime" required>
+            <label>Kids Behaviour</label>
+            <input type="text" placeholder="" required>
             <label>Attach Schedule(if any)</label>
             <textarea placeholder="schedule" ></textarea>
 
@@ -45,27 +226,150 @@
         </form>
         <form action="" id="form3">
             <h3>More Info</h3>
-            <label></label>
-            <input type="text" placeholder="Name">
-            <label>Full Name</label>
-            <input type="tel" placeholder="Phone Number">
-            <label>Phone Number</label>
-            <input type="email" placeholder="Email">
-            <label>Email</label>
-            <input type="email" placeholder="Email">
+            <label>Allergies (if any)</label>
+            <input type="text" placeholder="">
+            <label>Discipline and rewarding</label>
+            <textarea type="text" placeholder=""></textarea>
+            <label>Does your child have a disability</label>
+            <input type="" placeholder="disability">
+            <label>Household Info</label>
+            <input type="" placeholder="">
+            <label>Pets </label>
+            <input type="" placeholder="">
+            <label>Pet info(if any)</label>
+            <input type="" placeholder="">
+            <label>Does anyone in your family smoke?</label>
+            <input type="" placeholder="">
 
             <div class="btn_box">
                 <button id="Back2" type="button">Back</button>
-                <button id="Submit" type="button">Submit</button>
+                <button id="next3" type="button">Next</button>
+            </div>
+        </form>
+        <form action="" id="form4">
+            <h3>About Us</h3>
+            <label>Do you have Membership</label>
+            <input type="checkbox" value="yes">Yes
+            <input type="checkbox" value="No">No<br>
+            <label>How did you hear about us ?</label>
+            <input type="text" placeholder="">
+            <label>Can the Nanny bring her kid along ?</label>
+            <input type="text" placeholder="">
+            <div class="btn_box">
+                <button id="Back3" type="button">Back</button>
+                <button id="Submit" type="submit">Submit</button>
             </div>
         </form>
 
+        
+
         <div class="progress_container">
             <div class="progress" id="progress"></div>
-            <div class="circle active" style="background-color:#de3163;">1</div>
+            <div class="circle active">1</div>
             <div class="circle">2</div>
             <div class="circle">3</div>
+            <div class="circle">4</div>
         </div>
     </div>
 </body>
+<script>
+    "use strict";
+
+    const form1 = document.getElementById("form1");
+    const form2 = document.getElementById("form2");
+    const form3 = document.getElementById("form3");
+    const form4 = document.getElementById("form4");
+
+    const progressEL = document.getElementById('progress');
+    const circles = document.querySelectorAll('.circle');
+
+
+    let currentActive = 1;
+    //==============Second Form============
+    function nextOne() {
+        form1.style.left = "-500px";
+        form2.style.left = "25px";
+        currentActive++;
+        update();
+    }
+
+    function backOne() {
+        form1.style.left = "25px";
+        form2.style.left = "500px";
+        currentActive--;
+        update();
+    }
+
+        //==============Third Form============
+
+    function nextTwo() {
+        form2.style.left = "-500px";
+        form3.style.left = "25px";
+        currentActive++;
+        update();
+    }
+
+    function backTwo() {
+        form2.style.left = "25px";
+        form3.style.left = "500px";
+        currentActive--;
+        update();
+    }
+  
+    //==============Fourth Form============
+
+    function nextThree() {
+        form3.style.left = "-500px";
+        form4.style.left = "25px";
+        currentActive++;
+        update();
+    }
+
+    function backThree() {
+        form3.style.left = "25px";
+        form4.style.left = "500px";
+        currentActive--;
+        update();
+    }
+
+// ==========Progress Bar===========
+    function update() {
+        circles.forEach((circle, index) => {
+            if (index < currentActive) {
+                circle.classList.add('active');
+            } else {
+                circle.classList.remove('active');
+            }
+        });
+
+
+        const progressPercentage = ((currentActive - 1) / (circles.length - 1)) * 100;
+        progressEL.style.width = `${progressPercentage}%`;
+    }
+
+
+    const btnsEvent = () => {
+        const next1 = document.getElementById('next1');
+        const next2 = document.getElementById('next2');
+        const next3 = document.getElementById('next3');
+        const Back1 = document.getElementById('Back1');
+        const Back2 = document.getElementById('Back2');
+        const Back3 = document.getElementById('Back3');
+
+        next1.addEventListener('click', nextOne);
+        Back1.addEventListener('click', backOne);
+        next2.addEventListener('click', nextTwo);
+        Back2.addEventListener('click', backTwo);
+        next3.addEventListener('click', nextThree);
+        Back3.addEventListener('click', backThree);
+    };
+
+    document.getElementById("form4").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent the default form submission action
+        alert("Thank you for registering!"); // Show alert message
+    });
+
+    document.addEventListener("DOMContentLoaded", btnsEvent);
+
+</script>
 </html>
