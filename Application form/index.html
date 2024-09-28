@@ -364,11 +364,11 @@ form button:active{
         Back3.addEventListener('click', backThree);
     };
 
-    document.getElementById("form4").addEventListener("submit", function(e) {
-        e.preventDefault(); // Prevent the default form submission action
-        alert("Thank you for registering!"); // Show alert message
+    document.getElementById("form4").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents the form from submitting the traditional way
+    alert("Thank You for joining with us, we will get back to you soon.");
+    
     });
-
     document.addEventListener("DOMContentLoaded", btnsEvent);
 
 </script>
