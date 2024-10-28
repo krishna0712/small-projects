@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Lato","sans-serif";
+}
+
+
+.blank{
+    height: 80px;
+    background-color: rgba(11, 80, 57, 0.603);
+}
+
+
+.background{
+    height: 500px;
+    width: 100%;
+    background: url(/images/nanny2.png);
+    background-repeat: none;
+    background-size: cover;
+}
+
+#logo_img{
+    height: 80px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+button{
+    width: 90px;
+    height: 35px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+#services{
+    height: 250px;
+    background-color: bisque;
+}
