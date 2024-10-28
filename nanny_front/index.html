@@ -59,11 +59,12 @@
             border-radius: 10px;
         }
 
-        #hero_msg{
+        #hero_msg {
             position: relative;
             left: 90px;
             top: 200px;
         }
+
         #services {
             height: 370px;
             background-color: antiquewhite;
@@ -87,6 +88,246 @@
             background-color: rgba(11, 80, 57, 0.603);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
+        }
+
+        section {
+            z-index: -100;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1255343d;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: -1px -1px 1px black;
+            font-family: 'Dosis', sans-serif;
+            text-transform: uppercase;
+            font-size: 250%;
+            position: absolute;
+            top: 20%;
+            letter-spacing: 1px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20vh;
+            opacity: 0;
+            background-image: url("waves.png");
+            /* Replace with your wave image */
+            background-size: 100vw 20vh;
+
+        }
+
+
+        /* Waves with different animation timings, opacities, and z-indexes */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20vh;
+            background: url("/images/waves.png");
+            background-size: 100vw 20vh;
+            transform-style: preserve-3d;
+        }
+
+        /* Waves with different animation timings, opacities, and z-indexes */
+        .wave1 {
+            animation: wave-move-rotate 20s linear infinite;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .wave2 {
+            animation: wave-move-rotate 20.5s linear infinite;
+            opacity: 0.5;
+            z-index: 9;
+        }
+
+        .wave3 {
+            animation: wave-move-rotate 21s linear infinite;
+            opacity: 0.4;
+            z-index: 8;
+        }
+
+        .wave4 {
+            animation: wave-move-rotate 21.5s linear infinite;
+            opacity: 0.3;
+            z-index: 7;
+        }
+
+        .wave5 {
+            animation: wave-move-rotate 22s linear infinite;
+            opacity: 0.4;
+            z-index: 6;
+        }
+
+        .wave6 {
+            animation: wave-move-rotate 22.5s linear infinite;
+            opacity: 0.5;
+            z-index: 5;
+        }
+
+        .wave7 {
+            animation: wave-move-rotate 23s linear infinite;
+            opacity: 0.4;
+            z-index: 4;
+        }
+
+        .wave8 {
+            animation: wave-move-rotate 23.5s linear infinite;
+            opacity: 0.3;
+            z-index: 3;
+        }
+
+        .wave9 {
+            animation: wave-move-rotate 24s linear infinite;
+            opacity: 0.2;
+            z-index: 2;
+        }
+
+        .wave10 {
+            animation: wave-move-rotate 24.5s linear infinite;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .wave11 {
+            animation: wave-move-rotate 25s linear infinite;
+            opacity: 0.4;
+            z-index: 2;
+        }
+
+        .wave12 {
+            animation: wave-move-rotate 25.5s linear infinite;
+            opacity: 0.5;
+            z-index: 3;
+        }
+
+        .wave13 {
+            animation: wave-move-rotate 26s linear infinite;
+            opacity: 0.4;
+            z-index: 4;
+        }
+
+        .wave14 {
+            animation: wave-move-rotate 26.5s linear infinite;
+            opacity: 0.3;
+            z-index: 5;
+        }
+
+        .wave15 {
+            animation: wave-move-rotate 27s linear infinite;
+            opacity: 0.2;
+            z-index: 6;
+        }
+
+        .wave16 {
+            animation: wave-move-rotate 27.5s linear infinite;
+            opacity: 0.3;
+            z-index: 7;
+        }
+
+        .wave17 {
+            animation: wave-move-rotate 28s linear infinite;
+            opacity: 0.4;
+            z-index: 8;
+        }
+
+        .wave18 {
+            animation: wave-move-rotate 28.5s linear infinite;
+            opacity: 0.5;
+            z-index: 9;
+        }
+
+        .wave19 {
+            animation: wave-move-rotate 29s linear infinite;
+            opacity: 0.4;
+            z-index: 10;
+        }
+
+        .wave20 {
+            animation: wave-move-rotate 29.5s linear infinite;
+            opacity: 0.3;
+            z-index: 9;
+        }
+
+        @keyframes wave-move-rotate {
+            0% {
+                transform: translateX(100%) rotateX(0deg);
+            }
+
+            100% {
+                transform: translateX(-100%) rotateX(360deg);
+            }
+        }
+
+        #info_one::before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background-color: rgb(207, 178, 82);
+            border-radius: 9px;
+        }
+
+        #info_one {
+            position: relative;
+            top: 30%;
+            width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: rgb(3, 73, 134);
+            text-align: center;
+            border-radius: 10px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #info_one::after {
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 120%;
+            border-radius: 10px;
+            background: conic-gradient(red, rgb(212, 0, 255), rgb(0, 4, 255), rgb(0, 204, 255), rgb(0, 4, 255));
+            z-index: -1;
+            padding: 3px;
+            background-clip: border-box;
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotate-gradient 5s linear infinite;
+            transform-origin: center;
+        }
+
+        @keyframes rotate-gradient {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* New styles for the image to ensure it's on top */
+        .featurette-image {
+            z-index: 2;
+            /* Higher z-index to bring it above the gradient */
+            position: relative;
+            /* Ensure it's positioned correctly */
+        }
+
+        .featurette-text {
+            z-index: 3;
+            position: relative;
         }
 
         /* Footer Styles */
@@ -155,7 +396,8 @@
             <a href="#">Our Team</a>
             <button id="join">Join</button>
         </nav>
-        <h4 id="hero_msg">Trusted childcare solutions offering <br>flexibility and certified <br>nannies to meet your family’s needs</h4>
+        <h4 id="hero_msg">Trusted childcare solutions offering <br>flexibility and certified <br>nannies to meet your
+            family’s needs</h4>
     </div>
 
     <div id="services">
@@ -187,7 +429,7 @@
                     <p class="card-text">the card's content.</p>
                 </div>
             </div>
-            
+
             <div class="card" style="width: 14rem;">
                 <img src="images/service1.webp" class="card-img-top" alt="..." style="border-radius: 19px;">
 
@@ -198,6 +440,41 @@
         </div>
     </div>
 
+    <div class="about_us">
+        <section>
+            <h1 style="z-index: 1;">About US</h1>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+            <div class="wave wave5"></div>
+            <div class="wave wave6"></div>
+            <div class="wave wave7"></div>
+            <div class="wave wave8"></div>
+            <div class="wave wave9"></div>
+            <div class="wave wave10"></div>
+            <div class="wave wave11"></div>
+            <div class="wave wave12"></div>
+            <div class="wave wave13"></div>
+            <div class="wave wave14"></div>
+            <div class="wave wave15"></div>
+
+            <!-- About us Info -->
+            <div class="row featurette" id="info_one">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
+                            class="text-body-secondary">It’ll blow your mind.</span></h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                        prose here.</p>
+                </div>
+                <div class="col-md-5 col-border" role="status">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="200"
+                        height="200" src="/images/porsche.jpg" alt="Hangman Game Image">
+                </div>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="about-section">
@@ -206,23 +483,23 @@
                 </p>
             </div>
 
-                <div class="links-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#membership">Membership</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="links-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
 
-                <div class="contact-section">
-                    <h4>Contact Us</h4>
-                    <p>Address: [Insert Address]</p>
-                    <p>Phone: [Insert Phone Number]</p>
-                    <p>Email: <a href="mailto:info@nannysoscolorado.com">info@nannysoscolorado.com</a></p>
-                </div>
+            <div class="contact-section">
+                <h4>Contact Us</h4>
+                <p>Address: [Insert Address]</p>
+                <p>Phone: [Insert Phone Number]</p>
+                <p>Email: <a href="mailto:info@nannysoscolorado.com">info@nannysoscolorado.com</a></p>
+            </div>
 
             <div class="social-section">
                 <h4>Follow Us</h4>
