@@ -65,4 +65,3 @@ while play == "yes":
     play =input("Do you wish to play again against the mighty bot ?! (yes or no)")
     if play == "no":
         print("Thank you , come again when you feel lucky ;)")
-    
