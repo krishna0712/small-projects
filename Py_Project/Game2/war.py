@@ -40,7 +40,7 @@ class Cavalry(Soldier):
         print(f"{self.name} charges at {enemy.name}!. [-{damage}HP]")
         print(f"{enemy.name}'s health: {max(0, enemy.health)}")
 
-# Two-way Battle
+# Battle
 def fight_to_death(army, enemy):
     print("🔥 BATTLE COMMENCES 🔥")
     round_num = 1
@@ -49,12 +49,12 @@ def fight_to_death(army, enemy):
         print(f"\n------ ROUND {round_num} ------")
         round_num += 1
         
-        # Your army attacks
+        
         for unit in army:
             if unit.health > 0 and enemy.health > 0:
                 unit.attack(enemy)
                 
-        # Check if enemy is defeated
+
         if enemy.health <= 0:
             print(f"\n🏆 YOUR ARMY WINS!")
             break
