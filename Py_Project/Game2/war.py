@@ -65,7 +65,7 @@ def fight_to_death(army, enemy):
             if living_units:
                 target = random.choice(living_units)
                 print(f"\n⚔️ {enemy.name} counterattacks!")
-                damage = 25  # Enemy attack strength
+                damage = 25  
                 target.health -= damage
                 print(f"{enemy.name} strikes {target.name}! [-{damage}HP]")
                 print(f"{target.name}'s health: {max(0, target.health)}")
@@ -75,7 +75,7 @@ def fight_to_death(army, enemy):
                     print(f"\n💀 The enemy stands victorious...")
                     break
 
-# Armies Setup
+
 enemy = Soldier("Titan")
 your_army = [Soldier("Shadow"), Archer("Ussop"), Cavalry("Prince")]
 
